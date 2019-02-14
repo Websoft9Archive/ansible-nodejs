@@ -1,0 +1,14 @@
+---
+
+- name:  enable Remi Repo
+  command: yum-config-manager --enable remi
+
+- name: Install Redis
+  yum:
+    name: redis
+
+- name: enable Redis
+  service:
+    name: redis
+    state: restarted
+    enabled: yes

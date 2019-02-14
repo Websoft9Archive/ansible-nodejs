@@ -1,0 +1,20 @@
+---
+- name: Node.js
+  hosts: all
+  become: yes
+  become_method: sudo
+  become_user: root
+  
+  roles:
+  - { role: common , tags: "common"} 
+  - { role: nodejs , tags: "nodejs"} 
+  - { role: mysql , tags: "mysql"}
+  - { role: mongodb , tags: "mongodb"}
+  - { role: redis , tags: "redis"}
+
+  
+
+
+    
+
+
