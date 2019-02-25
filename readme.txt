@@ -19,6 +19,7 @@ Websoft9 Node.JS stack ships with the following software versions:
 
 ********
 -Node.js 10.15.1
+-PM2 3.3.0
 -Nginx 1.12.1
 -mysql 5.6.43
 -mongodb 3.0.15
