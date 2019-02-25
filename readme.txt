@@ -1,18 +1,16 @@
-Websoft Node.JS Stack v10.15.1
+Websoft9 Node.JS Stack v10.15.1
 ===========================
 
 1. OVERVIEW
 
 The Websoft9 Project was created to help spread the adoption of freely
 available, high quality, open source web applications. Websoft9 aims to make
-it easier than ever to discover, install Open Source software
+it easier than ever to discover, install, Use Open Source software
 
 You can learn more about Websoft9 at https://websoft9.com
 
 Websoft9 Node.js stack is an easy to install and easy to use open source Web 
-Platform. It combines leading open source projects, such as Apache, MySQL 
-and PHP with BitRock's extensive open source expertise to provide a consistent, 
-painless way to deploy WAMP in any Linux environment.
+Platform. It combines leading open source projects, such as Node.js,Nginx
 
 
 2. COMPONENTS and Version
