@@ -29,8 +29,6 @@
   template: src=my.cnf dest=/etc/my.cnf
   notify: restart MySQL
 
-
-
 - name: Start MySQL{{mysqlver}} Service
   service: name=mysqld state=started enabled=yes
   
@@ -97,3 +95,23 @@
     password: "{{mysql_password}}"
     priv: '*.*:ALL'
   when: remote 
+
+
+- name: Write Databases Password
+  shell: echo 'Dtabases root Password:'{{mysql_password}}  > /root/password.txt
+
+- name: Databases Random Password
+  copy: 
+    src: init.sh
+    dest: /root/
+    mode: 0750
+
+- name: Setting Startup
+  lineinfile:
+    path: /etc/rc.d/rc.local
+    regexp: '/root/init.sh'
+    line: '/root/init.sh'
+    mode: 0750
+
+- name: change permission of password.txt
+  shell: chmod 640 /root/password.txt
