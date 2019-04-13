@@ -25,6 +25,7 @@ Websoft9 Node.JS stack ships with the following software versions:
 -mysql 5.6.43
 -mongodb 4.0.6
 -redis 5.0.3
+-yarn 1.15.2
 ********
 
 
