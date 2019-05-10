@@ -1,6 +1,6 @@
 ---
 - name: Node.js
-  hosts: all
+  hosts: nodejs
   become: yes
   become_method: sudo
   become_user: root
