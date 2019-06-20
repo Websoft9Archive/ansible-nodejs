@@ -1,6 +1,6 @@
 ---
 - name: Node.js
-  hosts: server
+  hosts: all
   remote_user: '{{admin_username}}'
   become: yes
   become_method: sudo
