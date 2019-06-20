@@ -1,9 +1,9 @@
 ---
 - name: Node.js
-  hosts: nodejs
+  hosts: server
+  remote_user: '{{admin_username}}'
   become: yes
   become_method: sudo
-  become_user: root
   
   roles:
   - { role: common , tags: "common"} 
