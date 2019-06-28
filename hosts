@@ -1,3 +1,4 @@
 [nodejs]
-159.138.43.203    ansible_ssh_user=root  ansible_ssh_pass=Qwer1234
+localhost ansible_ssh_user=vagrant ansible_ssh_port=2222 ansible_ssh_private_key_file=/home/ubuntu/private_key 
+
 
