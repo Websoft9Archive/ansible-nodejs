@@ -26,4 +26,7 @@
   copy: 
     src: mongod.conf
     dest: /etc/
-  notify: restart MongoDB
+
+
+- name: restart MongoDB
+  service: name=mongod state=restarted enabled=yes
