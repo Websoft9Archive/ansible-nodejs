@@ -4,7 +4,7 @@ w9panel_set_apps:
   - Express
 
 # NodeJS 版本
-nodejs_ver: "12"
+nodejs_verion: "12"
 
 # link node.js
 nginx_reverse_proxy_port: "3000"
