@@ -1,5 +1,5 @@
 w9panel_webs: "nginx" 
-w9panel_set_infrastructure: "Java(Linux)" 
+w9panel_set_infrastructure: "Node.js runtime(Linux)" 
 w9panel_set_apps: 
   - Express
 
