@@ -7,10 +7,16 @@
 - src: http://github.com/websoft9dev/role_node.js
   version: master
 
+- src: http://github.com/websoft9dev/role_nginx
+  version: master
+
 - src: http://github.com/websoft9dev/role_mysql
   version: master
 
 - src: http://github.com/websoft9dev/role_mongodb
+  version: master
+
+- src: http://github.com/websoft9dev/role_docker
   version: master
 
 - src: http://github.com/websoft9dev/role_init_password
