@@ -4,7 +4,7 @@
 - src: http://github.com/websoft9dev/role_cloud
   version: master
 
-- src: http://github.com/websoft9dev/role_node.js
+- src: http://github.com/websoft9dev/role_nodejs
   version: master
 
 - src: http://github.com/websoft9dev/role_nginx
