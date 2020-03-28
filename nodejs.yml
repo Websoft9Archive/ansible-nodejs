@@ -18,12 +18,13 @@
       default: 3
 
     - name: 'mongodb_selection'
-      prompt: "\nPlease choose the number for MongoDB version [ 1/2/3/4] \n\n
-      1: MongoDB3.0\n
-      2: MongoDB3.2\n
-      3: MongoDB3.4\n
-      4: MongoDB3.6\n
-      5: MongoDB4.0\n"
+      prompt: "\nPlease choose the number for MongoDB version [ 1/2/3/4...] \n\n
+      1: MongoDB3.0(support Ubuntu16 and Redhat7)\n
+      2: MongoDB3.2(support Ubuntu16 and Redhat7)\n
+      3: MongoDB3.4(support Ubuntu16 and Redhat7)\n
+      4: MongoDB3.6(support Ubuntu16 and Redhat7)\n
+      5: MongoDB4.0\n
+      6: MongoDB4.2\n"
       private: no
       default: 4
 
@@ -49,6 +50,7 @@
       '3': '3.4'
       '4': '3.6'
       '5': '4.0'
+      '5': '4.2'
     mongodb_version: "{{mongodb_select[mongodb_selection]}}" 
 
     nodejs_select:
