@@ -16,7 +16,7 @@
 - src: http://github.com/websoft9dev/role_mongodb
   version: master
 
-- src: http://github.com/websoft9dev/role_express
+- src: http://github.com/websoft9dev/role_nodejs-apps
   version: master
 
 - src: http://github.com/websoft9dev/role_docker

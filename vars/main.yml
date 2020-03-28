@@ -9,6 +9,9 @@ nodejs_version: "12"
 # link node.js
 nginx_reverse_proxy_port: "3000"
 
+# install nodejs applications
+nodejs-apps_name: express
+
 # MySQL 版本和默认密码
 mysql_version: "5.7"       
 mysql_root_password: "123456"
