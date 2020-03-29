@@ -31,28 +31,34 @@
 查看 [nodejs.yml](/nodejs.yml) 文件中版本选择的内容，来查看和维护具体的详细版本号
 
 ```
-  vars_prompt:
-    - name: 'redis_version_number'
-      prompt: "\nPlease choose the number for Redis version [ 1/2/3/4/5/6 ] \n\n
-      1: Redis2.8.24\n
-      2: Redis3.0.7\n
-      3: Redis3.2.13\n
-      4: Redis4.0.14\n
-      5: Redis5.0.7\n
-      6: Redis-Latest\n"
+    - name: 'mysql_selection'
+      prompt: "\nPlease choose the number for MySQL version [ 1/2/3/4] \n\n
+      1: MySQL5.5(only for CentOS7.x, AmazonLinux)\n
+      2: MySQL5.6(only for CentOS7.x, AmazonLinux, Ubuntu16.04 )\n
+      3: MySQL5.7\n
+      4: MySQL8.0\n"
       private: no
-      default: 6
-  vars:
-    temp_ver:
-      '1': '2.8.24'
-      '2': '3.0.7'
-      '3': '3.2.13'
-      '4': '4.0.14'
-      '5': '5.0.7'
-      '6': 'stable'
-```
+      default: 3
 
-Redis-Latest 是官方发布的最新Stable版本，但还没有形成正式的发行版  
+    - name: 'mongodb_selection'
+      prompt: "\nPlease choose the number for MongoDB version [ 1/2/3/4...] \n\n
+      1: MongoDB3.0(support Ubuntu16 and Redhat7 family)\n
+      2: MongoDB3.2(support Ubuntu16 and Redhat7 family)\n
+      3: MongoDB3.4(support Ubuntu16 and Redhat7 family)\n
+      4: MongoDB3.6(support Ubuntu16 and Redhat7 family)\n
+      5: MongoDB4.0\n
+      6: MongoDB4.2\n"
+      private: no
+      default: 4
+
+    - name: 'nodejs_selection'
+      prompt: "\nPlease choose the number for MongoDB version [ 1/2/3/4] \n\n
+      1: NodeJS 10.x\n
+      2: NodeJS 12.x\n
+      3: NodeJS 13.x\n"
+      private: no
+      default: 2
+```
 
 我们会定期检查版本准确性，并增加官方最新的stable版本，以保证用户可以顺利安装所需的Redis版本。
 
@@ -61,7 +67,7 @@ Redis-Latest 是官方发布的最新Stable版本，但还没有形成正式的�
 以 root 用户登录 Linux，运行下面的**一键自动化安装命令**即可启动自动化部署。若没有 root 用户，请以其他用户登录 Linux 后运行 `sudo su -` 命令提升为 root 权限，然后再运行下面的脚本。
 
 ```
-wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.sh ; bash install.sh repository=redis
+wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.sh; bash install.sh -r nodejs
 ```
 
 脚本后启动，就开始了自动化安装，必要时需要用户做出交互式选择，然后耐心等待直至安装成功。
@@ -71,18 +77,14 @@ wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/i
 1. 操作不慎或网络发生变化，可能会导致SSH连接被中断，安装就会失败，此时请重新安装
 2. 安装缓慢、停滞不前或无故中断，主要是网络不通（或网速太慢）导致的下载问题，此时请重新安装
 
-多种原因导致无法顺利安装，请使用我们在公有云上发布的 [Redis 镜像](https://apps.websoft9.com/redis) 的部署方式
+多种原因导致无法顺利安装，请使用我们在公有云上发布的 [NodeJS 镜像](https://apps.websoft9.com/nodejs) 的部署方式
 
 
 ## 文档
 
-文档链接：https://support.websoft9.com/docs/redis/zh
+文档链接：https://support.websoft9.com/docs/nodejs/zh
 
 ## FAQ
 
 - 命令脚本部署与镜像部署有什么区别？请参考：[镜像部署-vs-脚本部署](https://support.websoft9.com/docs/faq/zh/bz-product.html#镜像部署-vs-脚本部署)
 - 本项目支持在 Ansible Tower 上运行吗？支持
-
-## To do
-
-* 增加可选的GUI工具 redisinsight
