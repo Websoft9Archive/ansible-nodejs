@@ -60,15 +60,15 @@
     nodejs_version: "{{nodejs_select[nodejs_selection]}}" 
 
   roles:
-  #- { role: role_common , tags: "role_common"} 
-  #- { role: role_nodejs , tags: "role_nodejs"} 
-  #- { role: role_nginx , tags: "role_nginx"} 
-  #- { role: role_mysql , tags: "role_mysql"}
-  #- { role: role_mongodb , tags: "role_mongodb"}
-  #- { role: role_nodejs_apps , tags: "role_nodejs_apps"}
-  #- { role: role_9panel , tags: "9panel"}
+  - { role: role_common , tags: "role_common"} 
+  - { role: role_nodejs , tags: "role_nodejs"} 
+  - { role: role_nginx , tags: "role_nginx"} 
+  - { role: role_mysql , tags: "role_mysql"}
+  - { role: role_mongodb , tags: "role_mongodb"}
+  - { role: role_nodejs_apps , tags: "role_nodejs_apps"}
+  - { role: role_9panel , tags: "9panel"}
   - { role: role_docker , tags: "role_docker"} 
-  #- { role: role_redis , tags: "role_redis"}
-  #- { role: role_init_password , tags: "role_init_password"} 
-  #- { role: role_preend , tags: "role_preend"} 
-  #- { role: role_end , tags: "role_end"} 
+  - { role: role_redis , tags: "role_redis"}
+  - { role: role_init_password , tags: "role_init_password"} 
+  - { role: role_preend , tags: "role_preend"} 
+  - { role: role_end , tags: "role_end"} 
