@@ -2,6 +2,8 @@
 
 ## To do
 
+* MEAN 和 MERN， e=express, r=React, a=Angular 
+
 ## Logs
 
 ### Bug Fixes
