@@ -9,7 +9,8 @@
 
   vars_prompt:
     - name: 'mysql_selection'
-      prompt: "\nPlease choose the number for MySQL version [ 1/2/3/4] \n\n
+      prompt: "\nPlease choose the number for MySQL version [ 0/1/2/3/4] \n\n
+      0: Don't install MySQL\n
       1: MySQL5.5(only for CentOS7.x, AmazonLinux)\n
       2: MySQL5.6(only for CentOS7.x, AmazonLinux, Ubuntu16.04 )\n
       3: MySQL5.7\n
@@ -38,6 +39,7 @@
 
   vars:
     mysql_select:
+      '0': ''
       '1': '5.5'
       '2': '5.6'
       '3': '5.7'
@@ -59,11 +61,22 @@
       '3': '13'
     nodejs_version: "{{nodejs_select[nodejs_selection]}}" 
 
+  pre_tasks:
+
+    - include_vars: vars/add_mysql.yml
+      when: mysql_version != ''
+
+    - include_vars: roles/role_cloud/vars/cloud_download_url.yml
+      when: region == '1' or region == 1
+
+    - debug:
+        msg: Nodejs will be installed, include  Nodejs{{nodejs_version}}, Mongodb{{mongodb_version}}, MySQL{{mysql_version}}
+
   roles:
   - { role: role_common , tags: "role_common"} 
   - { role: role_nodejs , tags: "role_nodejs"} 
   - { role: role_nginx , tags: "role_nginx"} 
-  - { role: role_mysql , tags: "role_mysql"}
+  - { role: role_mysql , tags: "role_mysql", when: mysql_version != ''}
   - { role: role_mongodb , tags: "role_mongodb"}
   - { role: role_nodejs_apps , tags: "role_nodejs_apps"}
   - { role: role_9panel , tags: "9panel"}
