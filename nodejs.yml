@@ -8,15 +8,13 @@
     - vars/main.yml
 
   vars_prompt:
-    - name: 'mysql_selection'
-      prompt: "\nPlease choose the number for MySQL version [ 0/1/2/3/4] \n\n
-      0: Don't install MySQL\n
-      1: MySQL5.5(only for CentOS7.x, AmazonLinux)\n
-      2: MySQL5.6(only for CentOS7.x, AmazonLinux, Ubuntu16.04 )\n
-      3: MySQL5.7\n
-      4: MySQL8.0\n"
+    - name: 'nodejs_selection'
+      prompt: "\nPlease choose the number for MongoDB version [ 1/2/3/4] \n\n
+      1: NodeJS 10.x\n
+      2: NodeJS 12.x\n
+      3: NodeJS 13.x\n"
       private: no
-      default: 3
+      default: 2
 
     - name: 'mongodb_selection'
       prompt: "\nPlease choose the number for MongoDB version [ 1/2/3/4...] \n\n
@@ -29,13 +27,15 @@
       private: no
       default: 4
 
-    - name: 'nodejs_selection'
-      prompt: "\nPlease choose the number for MongoDB version [ 1/2/3/4] \n\n
-      1: NodeJS 10.x\n
-      2: NodeJS 12.x\n
-      3: NodeJS 13.x\n"
+    - name: 'mysql_selection'
+      prompt: "\nPlease choose the number for MySQL version [ 0/1/2/3/4] \n\n
+      0: Don't install MySQL\n
+      1: MySQL5.5(only for CentOS7.x, AmazonLinux)\n
+      2: MySQL5.6(only for CentOS7.x, AmazonLinux, Ubuntu16.04 )\n
+      3: MySQL5.7\n
+      4: MySQL8.0\n"
       private: no
-      default: 2
+      default: 3
 
   vars:
     mysql_select:
