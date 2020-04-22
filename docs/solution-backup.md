@@ -49,5 +49,6 @@ Manual backup for application is based on the **Exporting source code and databa
 ```
 The general manual backup operation steps are as follows:
 
-1. Just compression and download the entire */usr/lib/rabbitmq* directory by SFTP 
+1. Just compression and download the entire */data/wwwroot* directory by SFTP 
+2. Export databases
 2. Backup completed

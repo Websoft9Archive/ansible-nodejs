@@ -47,6 +47,7 @@ module.exports = [
         children: [
           '/else-faq',
           '/else-troubleshooting',
+          '/else-glossary',
         ]
       },
       

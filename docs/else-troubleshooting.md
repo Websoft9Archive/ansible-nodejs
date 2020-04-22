@@ -6,16 +6,21 @@ We collect the most common troubleshooting of using Node.js for your reference:
 
 You can find the keywords **Failed** or **error** from the logs directory: `/data/logs`
 
-#### Node.js service can't start?
+#### Nginx service restart error
+Please make sure the `default.conf` is correct for you, and you can track and analyze log files from _/var/log/nginx_
 
-1. Use the debug mode of `rabbitmq-server console` and you can see the errors
-   ```
-   rabbitmq-server console
-   ```
-2. Search the keywords **Failed** or **error** from logs: */data/logs/rabbitmq-server*
+#### How to NPM Prevent Permissions Errors
+If you see an `EACCES` error when you try to install a package globally, read [this chapter](https://www.npmjs.com.cn/getting-started/fixing-npm-permissions/)
 
-#### Error in Chrome when modify password?
+#### If npm is broken
+please re-install npm  
 
-This error is not attribute to Node.js server, once you have upgraded you local Chrome, it solved
+```shell
+curl -L https://www.npmjs.org/install.sh | sh
+```
 
-![chrome error of Node.js](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-chromeerror-websoft9.png)
+#### Try clearing the npm cache
+Sometimes npm's cache gets confused. You can reset it using:
+```shell
+npm cache clean
+```

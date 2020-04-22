@@ -2,12 +2,24 @@
 
 These accounts are required for Node.js image installation and configuration
 
-## Node.js
+## MongoDB
 
-Node.js administrator username: `admin`  
-Node.js administrator password: `admin` or stored in the file of your server instance: */credentials/password.txt*  
+* Administrator username: *`root`*
+* Administrator password: stored in the file of your server instance: */credentials/password.txt*. You can use **SSH** and run the command to get the database password  
+  ```
+  cat /credentials/password.txt
+  ```
 
-You use the **SSH** and run the command `cat /credentials/password.txt` to get the password
+## MySQL
+
+* Administrator username: *`root`*
+* Administrator password: stored in the file of your server instance: */credentials/password.txt*. You can use **SSH** and run the command to get the database password  
+  ```
+  cat /credentials/password.txt
+  ```
+   ![Run the cat command](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
+
+> If you want to log in MySQL, refer to [MySQL Web interface Management](/admin-mysql.md) 
 
 ## Linux
 

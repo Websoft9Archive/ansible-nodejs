@@ -24,7 +24,7 @@
 
 ## 使用 Nginx 伪静态
 
-LNMP 环境默认已经安装 伪静态模块，通过下面两个方式配置网站的伪静态规格：
+Node.js 环境默认已经安装 伪静态模块，通过下面两个方式配置网站的伪静态规格：
 
 1.  在服务器目录 */etc/nginx/conf.d/rewrite* 下新建你网站的伪静态规则文件（例如：wordpress.conf）
 2.  在网站的[虚拟主机配置段](/zh/stack-components.md#nginx) **server{ }** 中将伪静态规则文件 include 进来
