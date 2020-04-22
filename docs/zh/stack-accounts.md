@@ -2,14 +2,22 @@
 
 使用Node.js，可能会用到的几组账号密码如下：
 
-## Node.js
+## MongoDB
 
-管理员账号: `admin`  
-管理员密码: `admin` 或 存储在您的服务器中的文件中 */credentials/password.txt*  
+* 管理员账号：*`root`*
+* 管理员密码：存储在您的服务器指定文件中（ */credentials/password.txt* ）    
+  使用**SSH**登录服务器，运行 `cat /credentials/password.txt` 命令，获取数据库密码   
 
-运行 `cat /credentials/password.txt` 命令，可以查看其中内容  
+   > 需要使用MongoDB，请参考 [MongoDB可管理](/zh/admin-mongodb.md)
 
-> 本地浏览器访问：http://服务器公网IP:15672 即可打开Node.js 控制台
+## MySQL
+
+* 管理员账号：*`root`*
+* 管理员密码：存储在您的服务器指定文件中（ */credentials/password.txt* ）    
+  使用**SSH**登录服务器，运行 `cat /credentials/password.txt` 命令，获取数据库密码   
+   ![运行cat命令](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
+
+   > 需要使用MySQL，请参考 [MySQL可视化管理](/zh/admin-mysql.md)
 
 ## Linux
 

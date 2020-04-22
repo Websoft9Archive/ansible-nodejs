@@ -17,11 +17,14 @@ module.exports = [
     collapsable: false,
     children: [
       '/zh/solution-deployment',
+      '/zh/solution-npm',
+      '/zh/solution-pm2',
+      '/zh/solution-nvm',
       '/zh/solution-https',
       '/zh/solution-smtp',
-      '/zh/solution-cli',
       '/zh/solution-backup',
       '/zh/solution-upgrade',
+      '/zh/solution-applications',
       '/zh/solution-more',
     ]
   },

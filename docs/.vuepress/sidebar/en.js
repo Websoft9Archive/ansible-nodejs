@@ -16,11 +16,14 @@ module.exports = [
         collapsable: false,
         children: [
           '/solution-deployment',
+          '/solution-npm',
+          '/solution-pm2',
+          '/solution-nvm',
           '/solution-https',
           '/solution-smtp',
-          '/solution-cli',
           '/solution-backup',
           '/solution-upgrade',
+          '/solution-applications',
           '/solution-more',
         ]
       },

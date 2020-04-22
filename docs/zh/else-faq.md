@@ -1,23 +1,71 @@
 # FAQ
 
-#### 如何以调试模式启动Node.js服务？
+#### 默认字符集是什么？
+UTF-8
 
+#### What's different between YARN and NPM?
+
+[Yarn](https://yarnpkg.com/en/) 是在NPM之后推出的一个包管理解决方案
+
+| npm | yarn |
+| ---: | :--- |
+| npm install | yarn |
+| npm install react --save | yarn add react |
+| npm uninstall react --save | yarn remove react |
+| npm install react --save-dev | yarn add react --dev |
+| npm update --save | yarn upgrade |
+
+#### Nginx 虚拟主机配置文件是什么？
+
+虚拟主机配置文件是 Nginx 用于管理多个网站的**配置段集合**，路径为：*/etc/nginx/conf.d/default.conf*。  
+每个配置段的形式为： `server{ }`，有多少个网站就有多少个配置段
+
+#### 如何修改示例网站根目录？
+
+待续...
+
+#### Node.js 环境是否支持部署多个网站？
+
+支持。每增加一个网站，只需在[Nginx 虚拟主机配置文件](/zh/stack-components.md#nginx)中增加对应的 **server{ }** 即可。
+
+#### 如果没有域名是否可以部署 Node.js 应用？
+
+可以，访问`http://服务器公网IP:端口号` 即可
+
+#### 数据库 root 用户对应的密码是多少？
+
+密码存放在服务器相关文件中：`/credentials/password.txt`
+
+#### 是否有可视化的数据库管理工具？
+
+有，内置phpMyAdmin 和 adminMongo
+
+#### 如何删除9Panel?
+
+删除 */data/apps/9panel* 下的所有数据即可，但需要保留文件夹
+
+#### 如何修改上传的文件权限?
+
+```shell
+# 拥有者
+chown -R nginx.nginx /data/wwwroot/
+# 读写执行权限
+find /data/wwwroot/ -type d -exec chmod 750 {} \;
+find /data/wwwroot/ -type f -exec chmod 640 {} \;
 ```
-systemctl stop rabbitmq-server
-rabbitmq-server console
+#### 如果设置 HTTP 跳转到 HTTPS？
+
+只需在网站对应的 server{} 配置段中增加规则即可：
+```
+ if ($scheme != "https") 
+    {
+    return 301 https://$host$request_uri;
+    }
 ```
 
-#### 是否可以通过命令行修改Node.js后台密码？
+#### 如何启用或禁用 Nginx 模块？
 
-可以，`rabbitmqctl change_password  admin newpassword`
-
-#### 如果没有域名是否可以部署 Node.js？
-
-可以，访问`http://服务器公网IP` 即可
-
-#### 是否可以修改Node.js的源码路径？
-
-不可以
+不支持模块启用或关闭
 
 #### 部署和安装有什么区别？
 

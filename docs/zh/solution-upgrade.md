@@ -24,4 +24,27 @@ yum update -y
 
 ## Node.js升级
 
-详情参考官方升级文档：[Upgrading Node.js](https://www.rabbitmq.com/upgrade.html)
+### Upgrade NPM
+
+When you install node.js, npm is automatically installed. However, npm gets updated more frequently than Node.js, so be sure that you have the latest version.
+
+```shell
+#view the version of NPM
+npm -v
+
+#install the latest official, tested version of npm.
+npm install npm@latest -g
+
+#install a version that will be released in the future
+npm install npm@netx -g
+
+# upgrade node.js
+npm install -g n
+n stable
+```
+
+### Upgrade PM2
+
+```shell
+npm install pm2@latest -g
+```

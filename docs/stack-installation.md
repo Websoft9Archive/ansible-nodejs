@@ -5,26 +5,29 @@ If you have completed the Node.js deployment on Cloud Platform, the following st
 ## Preparation
 
 1. Get the **Internet IP** on your Cloud Platform
-2. Check you **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the TCP:8161 is allowed
+2. Check you **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the TCP:80 is allowed
 3. Make a domain resolution on your DNS Console if you want to use domain for Node.js
 
 ## Node.js Installation Wizard
 
-1. Using local Chrome or Firefox to visit the URL *http://DNS:15672* or *http://Internet IP:15672*, you will enter installation wizard of Node.js
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-login-websoft9.png)
+1. Using local Chrome or Firefox to visit the URL *http://Internet IP/9panel* to enter the boot page
+   ![9panel](https://libs.websoft9.com/Websoft9/DocsPicture/en/9panel/9panelmain-websoft9.png)
 
-2. Log in to Node.js web console([Don't have password?](/stack-accounts.md#rabbitmq))  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-bk-websoft9.png)
+2. You can get the basics of image, manage the database, access docs, and helpdesk from 9Panel
 
-3. Set you new password from: 【Users】>【Admin】>【Permissions】>【Update this user】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-pw-websoft9.png)
+## Log in Database
 
-> More useful Node.js guide, please refer to [Node.js Documentation](https://www.rabbitmq.com/documentation.html)
+Node.js runtime includes MongoDB and MySQL and their Web-GUI tools
+
+* [Manage MySQL](/admin-mysql.md) 
+* [Manage MongoDB](/admin-mongodb.md)
 
 ## Q&A
 
 #### I can't visit the start page of Node.js?
 
-Your TCP:15672 of Security Group Rules is not allowed so there no response from Chrome or Firefox
+Your TCP:80 of Security Group Rules is not allowed so there no response from Chrome or Firefox
 
-#### Node.js service can't start? 
+#### What's 9Panel?
+
+[9Panel](https://github.com/Websoft9/9panel) is an opensource component included in some image of Websoft9, it is powered by Websoft9. 9Panel is a set of HTML pages for quickly using image of Websoft9. You should delete all the files in 9Panel folder if you do not want to delete 9Panel

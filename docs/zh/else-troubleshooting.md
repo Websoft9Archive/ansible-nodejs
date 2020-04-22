@@ -8,18 +8,19 @@
 
 日志文件路径为：`/data/logs`。检索关键词 **Failed** 或者 **error** 查看错误
 
-#### Node.js服务无法启动？
+#### How to NPM Prevent Permissions Errors
+If you see an `EACCES` error when you try to install a package globally, read [this chapter](https://www.npmjs.com.cn/getting-started/fixing-npm-permissions/)
 
-1. 以调试模式运行`rabbitmq-server console`，便可以查看启动状态和错误
-   ```
-   rabbitmq-server console
-   ```
-2. 打开日志文件：*/data/logs/rabbitmq-server*，检索 **failed** 关键词，分析错误原因
+#### If npm is broken
+Using Linux, please re-install npm：
+```shell
+curl -L https://www.npmjs.org/install.sh | sh
+```
 
+Using Windows, please download and re-install it。(remember [this note](https://www.npmjs.com.cn/troubleshooting/try-the-latest-stable-version-of-npm#upgrading-on-windows)).
 
-#### 在Chrome下修改密码后报错？
-
-这个并不是服务器端的问题，只要更新浏览器即可。
-
-![chrome error of Node.js](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-chromeerror-websoft9.png)
-
+#### Try clearing the npm cache
+Sometimes npm's cache gets confused. You can reset it using:
+```shell
+npm cache clean
+```

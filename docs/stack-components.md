@@ -48,10 +48,33 @@ You can see the version from product page of Marketplace. However, after being d
 # Linux Version
 lsb_release -a
 
-# erlang  Version
-yum info erlang
-apt show erlang
+# Node.js  Version
+node -v
 
-# Node.js version
-rabbitmqctl status | grep Node.js*
+# PM2  Version
+pm2 -V
+
+# NPM version
+npm -v
+
+# yarn version
+yarn --version
+
+# MongoDB version
+mongo --version
+
+# Nginx version
+nginx -v
+
+# List Installed Nginx Modules
+nginx -V
+
+# MySQL version
+mysql -V
+
+# Redis version
+redis-server -v
+
+# Docker version
+docker -v
 ```
