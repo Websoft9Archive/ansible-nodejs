@@ -1,7 +1,7 @@
 
 # Nodejs 运行环境 自动化安装与部署
 
-本项目是由 [Websoft9](https://www.websoft9.com) 研发的 **Nodejs 运行环境（MEAN）** 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 Redis，让原本复杂的安装过程变得没有任何技术门槛。  
+本项目是由 [Websoft9](https://www.websoft9.com) 研发的 **Nodejs 运行环境（MEAN）** 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 Nodejs，让原本复杂的安装过程变得没有任何技术门槛。  
 
 本项目是开源项目，采用 LGPL3.0 开源协议。
 
@@ -24,7 +24,7 @@
 
 ## 本项目安装的是 Nodejs 最新版吗？
 
-本项目是下载[Redis源码](https://rpm.nodesource.com)在线安装，能够保证版本为最新。 
+本项目是下载[Nodejs源码](https://rpm.nodesource.com)在线安装，能够保证版本为最新。 
 
 同时，启动安装后，系统会提示选择NodeJS的大版本、MongoDB的大版本、MySQL的版本。
 
