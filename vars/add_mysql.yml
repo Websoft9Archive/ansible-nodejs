@@ -9,8 +9,8 @@ docker_applications:
 # 初始化 MySQL 与 MongoDB root密码
 init_db: 
     mysql:
-      user: root
+      admin: root
       password: "123456"  
     mongodb:
-      user: root
+      admin: root
       password: "123456"
