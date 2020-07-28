@@ -1,3 +1,5 @@
+common_os_support: ["CentOS", "Ubuntu", "Amazon"]
+
 w9panel_webs: "nginx" 
 w9panel_set_infrastructure: "Node.js runtime(Linux)" 
 w9panel_set_apps: 
@@ -19,7 +21,7 @@ docker_applications:
   - adminmongo
 
 # install certbot
-preend_certbot: True
+nginx_certbot: True
 
 # 初始化 MySQL 与 MongoDB root密码
 init_db:  
