@@ -11,7 +11,6 @@ nginx_reverse_proxy_port: "3000"
 # install nodejs applications
 nodejs-apps_name: express
 
-# MongoDB 版本和默认密码
 mongodb_root_password: "123456"
 mongodb_remote: True
 mongodb_authentication: True
