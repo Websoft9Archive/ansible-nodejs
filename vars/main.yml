@@ -7,6 +7,9 @@ w9panel_set_apps:
 
 # link node.js
 nginx_reverse_proxy_port: "3000"
+nginx_certbot: True
+nginx_appname: "nodejs"
+nginx_vhost_mode: "reverse"
 
 # install nodejs applications
 nodejs-apps_name: express
@@ -19,8 +22,7 @@ mongodb_server: "community"
 docker_applications: 
   - adminmongo
 
-# install certbot
-nginx_certbot: True
+
 
 # 初始化 MySQL 与 MongoDB root密码
 init_db:  
