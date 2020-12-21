@@ -78,7 +78,6 @@
   - { role: role_nginx , tags: "role_nginx"} 
   - { role: role_mysql , tags: "role_mysql", when: mysql_version != ''}
   - { role: role_mongodb , tags: "role_mongodb"}
-  - { role: role_nodejs_apps , tags: "role_nodejs_apps"}
   - { role: role_9panel , tags: "9panel"}
   - { role: role_docker , tags: "role_docker"} 
   - { role: role_redis , tags: "role_redis"}
