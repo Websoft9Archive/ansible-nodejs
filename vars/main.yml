@@ -12,7 +12,8 @@ nginx_appname: "nodejs"
 nginx_vhost_mode: "reverse"
 
 # install nodejs applications
-nodejs_applications: express
+nodejs_applications: 
+  - express
 
 mongodb_root_password: "123456"
 mongodb_remote: True
