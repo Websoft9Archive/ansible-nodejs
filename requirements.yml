@@ -10,8 +10,6 @@
 
 - src: http://github.com/websoft9dev/role_mongodb
 
-- src: http://github.com/websoft9dev/role_nodejs_apps
-
 - src: http://github.com/websoft9dev/role_9panel
 
 - src: http://github.com/websoft9dev/role_docker
