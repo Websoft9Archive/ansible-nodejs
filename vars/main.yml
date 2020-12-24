@@ -1,5 +1,5 @@
 common_os_support: ["CentOS", "Ubuntu", "Amazon"]
-# test
+
 w9panel_webs: "nginx" 
 w9panel_set_infrastructure: "Node.js runtime(Linux)" 
 w9panel_set_apps: 
