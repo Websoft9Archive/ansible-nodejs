@@ -30,3 +30,15 @@ init_db:
     mongodb:
       admin: root
       password: "123456"
+
+
+init_application:
+  wordpress:
+    username: admin
+    password: "123456"
+    service_before:
+    service_after: pm2-root.service
+    commands: 
+      - sudo pm2 delete www
+      - sudo pm2 start /data/wwwroot/express/bin/www --watch
+      - sudo pm2 save
