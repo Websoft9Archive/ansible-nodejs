@@ -33,10 +33,7 @@ init_db:
 
 
 init_application:
-  wordpress:
-    username: admin
-    password: "123456"
-    service_before:
+  express:
     service_after: pm2-root.service
     commands: 
       - sudo pm2 delete www
