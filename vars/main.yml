@@ -35,7 +35,8 @@ init_db:
 init_application:
   express:
     service_after: pm2-root.service
-    commands: 
-      - sudo pm2 delete www
-      - sudo pm2 start /data/wwwroot/express/bin/www --watch
-      - sudo pm2 save
+    commands:
+      - sudo su 
+      - pm2 delete www
+      - pm2 start /data/wwwroot/express/bin/www --watch
+      - pm2 save
