@@ -37,3 +37,4 @@ init_application:
     service_after: pm2-root.service
     commands:
       - sudo su - -c "pm2 delete www;pm2 start /data/wwwroot/express/bin/www --watch;pm2 save"
+      - sudo su - -u root -c "pm2 delete www;pm2 start /data/wwwroot/express/bin/www --watch;pm2 save"
