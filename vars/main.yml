@@ -36,6 +36,6 @@ init_application:
   express:
     service_after: pm2-root.service
     commands:
-      - /opt/nvm/versions/node/*/bin/pm2 delete www
-      - /opt/nvm/versions/node/*/bin/pm2 start /data/wwwroot/express/bin/www --watch
-      - /opt/nvm/versions/node/*/bin/pm2 save
+      - pm2 delete www
+      - pm2 start /data/wwwroot/express/bin/www --watch
+      - pm2 save
