@@ -9,7 +9,7 @@
 
   vars_prompt:
     - name: 'nodejs_selection'
-      prompt: "\nPlease choose the number for MongoDB version [ 1/2/3/4] \n\n
+      prompt: "\nPlease choose the number for NodeJS version [ 1/2/3/4] \n\n
       1: NodeJS 10.x\n
       2: NodeJS 12.x\n
       3: NodeJS 13.x\n
