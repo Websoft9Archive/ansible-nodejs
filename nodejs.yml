@@ -26,7 +26,8 @@
       3: MongoDB3.4(support Ubuntu16 and Redhat7 family)\n
       4: MongoDB3.6(support Ubuntu16 and Redhat7 family)\n
       5: MongoDB4.0\n
-      6: MongoDB4.2\n"
+      6: MongoDB4.2\n
+      7: MongoDB5.0\n"
       private: no
       default: 4
 
@@ -56,6 +57,7 @@
       '4': '3.6'
       '5': '4.0'
       '6': '4.2'
+      '7': '5.0'
     mongodb_version: "{{mongodb_select[mongodb_selection]}}" 
 
     nodejs_select:
