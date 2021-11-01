@@ -16,6 +16,7 @@
       4: NodeJS 14.x\n
       5: NodeJS 15.x\n
       6: NodeJS 16.x\n"
+      7: NodeJS 17.x\n"
       private: no
       default: 4
 
@@ -67,6 +68,7 @@
       '4': '14'
       '5': '15'
       '6': '16'
+      '7': '17'
     nodejs_version: "{{nodejs_select[nodejs_selection]}}" 
 
   pre_tasks:
