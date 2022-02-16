@@ -10,7 +10,7 @@
   vars_prompt:
     - name: 'nodejs_selection'
       prompt: "\nPlease choose the number for NodeJS version [ 1/2/3/4/5/6] \n\n
-      1: NodeJS 11.x\n
+      1: NodeJS 10.x\n
       2: NodeJS 12.x\n
       3: NodeJS 13.x\n
       4: NodeJS 14.x\n
@@ -62,7 +62,7 @@
     mongodb_version: "{{mongodb_select[mongodb_selection]}}" 
 
     nodejs_select:
-      '1': '11'
+      '1': '10'
       '2': '12'
       '3': '13'
       '4': '14'
