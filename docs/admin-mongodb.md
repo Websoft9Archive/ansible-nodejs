@@ -1,7 +1,5 @@
 # MongoDB
 
-# MySQL
-
 Node.js deployment package includes MongoDB and Web-GUI tool adminMongo for MongoDB management, refer to these steps to use it:
 
 1. Using the Chrome or FireFox to visit URL *http://Internet IP:9091* for adminMongo
